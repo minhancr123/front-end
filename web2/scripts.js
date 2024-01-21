@@ -15,3 +15,6 @@ loginbtn.addEventListener("click", () => {
 closebtn.addEventListener("click", () => {
   wrapper.classList.remove("active-popup");
 });
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
