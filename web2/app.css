@@ -207,3 +207,19 @@ h2 {
   transition: transform 0.5s ease;
   transform: scale(1);
 }
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+  .navigation a {
+    font-size: 0.8em;
+    margin-left: 7px;
+  }
+  .btn-login {
+    font-size: 0.9em;
+    padding: 8px;
+    margin-left: 40px;
+  }
+}
