@@ -21,14 +21,18 @@ const handletext = (text) => {
     let location = handletext.split("weather in")[1].trim();
     console.log(handletext);
     if (location.endsWith(".")) {
-      // Nếu có, loại bỏ dấu chấm cuối cùng
       location = location.slice(0, -1);
     }
+
     console.log(handletext.split("in"));
     console.log(location);
     searchinput.value = location;
     const change = new Event("click");
     search.dispatchEvent(change);
+  } else if (handletext.includes("time")) {
+    const time = new Date();
+    const date = `${time.getHours()} hours ${time.getMinutes()} minutes`;
+    speak(date);
   }
 };
 search.addEventListener("click", (e) => {
